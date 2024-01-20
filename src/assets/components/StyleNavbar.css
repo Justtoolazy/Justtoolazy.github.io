@@ -1,0 +1,256 @@
+.Navbar
+{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 4rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav--logo
+{
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  background-image: url(../../../public/cat-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav--items
+{
+  position: relative;
+  padding: 0;
+  width: 50vw;
+  height: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10%;
+  list-style-type: none;
+  cursor:grab;
+}
+
+.nav--item
+{
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.nav--item:hover
+{
+  color: #FEE67B;
+  font-size: 1.3rem;
+}
+
+/*nav--settings*/
+.nav--settings
+{
+  width: auto;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+  .nav--tryAgain
+  {
+    min-width: 80px;
+    height: 30px;
+    font-size: 80%;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid white;
+    cursor: grab;
+    border-radius: 5%;
+  }
+  .nav--volume
+  {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin: 0.5rem;
+  }
+  .nav--button
+  {
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 0.1rem;
+    transition: 0.5s;
+    cursor:grabbing;
+    display: flex;
+    align-items: center;
+  }
+  .--button--circle
+  {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.3s;
+  }
+/*End--nav--settings*/
+
+.settings--menu
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 1rem;
+  display: none;
+}
+.settings--menu:hover
+{
+  background-color: #FDD730;
+}
+
+/*page Menu*/
+.page--menuSettings
+{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1;
+  top: 0;
+}
+.--menuSettings--box
+{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  box-shadow: 0px 0px 4px 1px rgba(128, 128, 128, 0.600);
+  padding-top: 5%;
+}
+.--menuSettings--box > h1
+{
+  margin-left: 5%;
+}
+.--box--close
+{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1rem;
+  right: 1rem;
+  background: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box--nav
+{
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+}
+.box--nav > div
+{
+  padding-left: 10%;
+  
+}
+
+/*end page*/
+
+@media (max-width: 400px) {
+  .Navbar
+  {
+    height: 2.5rem;
+  }
+  .nav--settings, .nav--tryAgain, .nav--volume, .nav--button, .--button--circle, .nav--items {
+    display: none;
+  }
+  .nav--logo {
+    zoom: 0.7;
+  }
+  .settings--menu {
+    display: block;
+  }
+  .--menuSettings--box
+  {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 650px) {
+  .nav--items {
+    display: none;
+  }
+  .Navbar
+  {
+    height: 3rem;
+  }
+  .Navbar {
+    display: flex;
+    justify-items: flex-end;
+  }
+  .nav--settings {
+    margin-left: auto;
+  }
+  .settings--menu {
+    display: block;
+  }
+  .--menuSettings--box
+  {
+    animation: moveleft 0.5s ease-in-out;
+  }
+  @keyframes moveleft {
+    0%   {left: 100% }
+    100% {left: 50%}
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1200px) {
+  .nav--items, .nav--item {
+    zoom: 0.8;
+  }
+  .nav--tryAgain, .nav--volume {
+    zoom: 1.1;
+  }
+  .Navbar
+  {
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1800px) {
+  .nav--items, .nav--item {
+    zoom: 1;
+  }
+  .nav--tryAgain, .nav--volume {
+    zoom: 1.3;
+  }
+  .nav--logo {
+    zoom: 1.3;
+  }
+}
+
+@media (min-width: 1801px) {
+  .nav--items, .nav--item  {
+    zoom: 1.2;
+  }
+  .nav--logo {
+    zoom: 1.6;
+  }
+  .Navbar
+  {
+    height: 5rem;
+  }
+  .nav--tryAgain, .nav--volume {
+    zoom: 1.5;
+  }
+}

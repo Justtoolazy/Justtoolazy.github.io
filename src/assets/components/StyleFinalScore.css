@@ -1,0 +1,49 @@
+.container--ScoreMenu
+{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000c1;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score--Container {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.score--Container > h1 {
+  font-size: 150px;
+  color: white;
+  margin: -50%;
+}
+.score--Container > h2 {
+  font-size: 50px;
+  color: rgb(235, 248, 0);
+  margin: 0;
+}
+.exit--container
+{
+  position: absolute;
+  color: rgba(255, 255, 255, 0.479);
+  font-size: 50px;
+  top: 120px;
+  right: 20px;
+  transform: translate(-100%, -100%);
+  transition: 0.3s;
+}
+.exit--container:hover
+{
+  color: white;
+  font-size: 55px;
+  top: 110;
+  right: 10;
+}

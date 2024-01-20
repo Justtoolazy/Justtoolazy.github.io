@@ -1,0 +1,454 @@
+.game--container
+{
+  position: relative;
+  margin: 0;
+  padding-top: 2%;
+  min-height: 80%;
+  width: 100%;
+  background-color: transparent;
+  display: grid;
+  justify-content: center;
+  overflow: hidden;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+/* */
+.game--valued
+{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  .valued--heart 
+  {
+    font-size: 1.8rem;
+    width: 30%;
+    display: flex;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 248, 235);
+  }
+  .--heart
+  {
+    position: absolute;
+    margin-top: -15px;
+    width: 80px;
+    height: 80px;
+    background-image: url('../../../public/Heart.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+  .valued--score 
+  {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, 40%);
+  }
+  .valued--score > h1 {
+    font-size: 10rem;
+    color: rgb(255, 202, 27);
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .valued--highScore 
+  {
+    font-size: 1rem;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+/* */
+.--game
+{
+  width: 100%;
+  min-height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*container*/
+.paint--container
+{
+  position: relative;
+  width: 500px;
+  height: 400px;
+  padding: 1%;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid grey;
+  background-image: url('../../../public/GamePaintCan2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 5px solid black;
+  box-shadow: 0px 0px 6px 4px rgba(128, 128, 128, 0.586);
+}
+.clues--container
+{
+  position: relative;
+  min-width: 800px;
+  height: auto;
+  padding: 1%;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+}
+
+.clues--clue
+{
+  width: 100%;
+  height: 90%;
+}
+
+/*the clues*/
+.--clues--cont
+{
+  display: flex;
+}
+.--clue 
+{
+  padding: 2%;
+  flex: 1;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  inline-size: none;
+  font-size: 1rem;
+}
+.paint--percentage
+{
+  position: relative;
+  width: 120px;
+  background-color: transparent;
+  background-image: url('../../../public/GamePaintCan.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 6px 4px rgba(128, 128, 128, 0.586);
+
+}
+.--clue--checker
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0, 50%);
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*range apperance*/
+.--clue--range
+{
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 1px;
+  height: 15px;
+  width: 100%;
+  background: rgb(167, 104, 50);
+  border-radius: 10px;
+  border: 3px solid black;
+}
+.--clue--range::-webkit-slider-thumb
+{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgb(255, 235, 133);
+  border: 5px solid grey;
+}
+.check--result {
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  width: 250px;
+  height: 40px;
+  background-color: rgb(255, 235, 133);
+  border: 5px solid grey;
+  border-radius: 10px;
+  align-self: end;
+  justify-self: end;
+  margin-top: 10px;
+  
+}
+
+@media (max-width: 400px) {
+  .valued--heart > h1, .valued--score > h1, .valued--highScore > h1 {
+    zoom: 0.40;
+  }
+  .--game
+  {
+    display: grid;
+    place-items: center;
+  }
+  .game--container
+  {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+    width: 100vw; 
+  }
+  .game--valued 
+  {
+    margin-top: 0.4rem;
+    height: 65px;
+  }
+  .paint--container
+  {
+    zoom: 0.50;
+  }
+  .clues--container
+  {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .paint--percentage
+  {
+    width: 80px;
+    height: 80px;
+  }
+  .clues--clue
+  {
+   width: 90vw;
+  }
+  .--clue
+  {
+    height: 80px;
+    font-size: 0.4rem;
+  }
+  .--clue--range {
+    height: 15px;
+  }
+  .--clue--range::-webkit-slider-thumb{
+    zoom: 0.7;
+  }
+  .--clue--checker {
+    zoom: 0.6;
+  }
+  .check--result {
+    margin-top: 10px;
+    zoom: 0.7;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 650px) {
+  .valued--heart > h1, .valued--score > h1, .valued--highScore > h1 {
+    zoom: 0.55;
+  }
+  .--game
+  {
+    display: grid;
+    place-items: center;
+  }
+  .game--container
+  {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    width: 100vw; 
+  }
+  .game--valued 
+  {
+    margin-top: 0.6rem;
+    height: 65px;
+  }
+  .--heart
+  {
+    zoom: 1.1;
+  }
+  .paint--container
+  {
+    zoom: 0.60;
+  }
+  .clues--container
+  {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .paint--percentage
+  {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+  }
+  .clues--clue
+  {
+   width: 90vw;
+  }
+  .--clue
+  {
+    height: 90px;
+    font-size: 0.5rem;
+  }
+  .--clue--range {
+    height: 15px;
+  }
+  .--clue--range::-webkit-slider-thumb{
+    zoom: 0.8;
+  }
+  .--clue--checker {
+    zoom: 0.7;
+  }
+  .check--result {
+    margin-top: 10px;
+    zoom: 0.8;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1200px) {
+  .valued--heart > h1, .valued--score > h1, .valued--highScore > h1 {
+    zoom: 0.60;
+  }
+  .game--valued {
+    margin-top: 0.6rem;
+    height: 60px;
+  }
+  .paint--container
+  {
+    zoom: 0.70;
+  }
+  .--heart
+  {
+    zoom: 1.2;
+  }
+  .clues--container
+  {
+    zoom: 0.75;
+    margin-top: -50px;
+    row-gap: 0;
+  }
+  .--clue
+  {
+    height: 120px;
+    font-size: smaller;
+  }
+  .game--container
+  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    row-gap: 1rem;
+  }
+  .--game
+  {
+    display: grid;
+    place-items: center;
+  }
+  .check--result
+  {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1800px) {
+  .valued--heart > h1, .valued--score > h1, .valued--highScore > h1 {
+    zoom: 0.80;
+  }
+  .game--valued {
+    margin-top: 1rem;
+    height: 80px;
+  }
+  .--heart
+  {
+    zoom: 1.5;
+  }
+  .paint--container
+  {
+    zoom: 1;
+  }
+  .clues--container
+  {
+    zoom: 0.7;
+  }
+  .game--container
+  {
+    min-width: 90%;
+    top: 1rem;
+    row-gap: 2rem;
+  }
+  .--clue 
+  {
+    zoom: 0.8;
+  }
+  .check--result
+  {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 1801px) {
+  .valued--heart > h1, .valued--score > h1, .valued--highScore > h1 {
+    zoom: 1.4;
+  }
+  .game--valued
+  {
+    height: 200px;
+  }
+  .--heart
+  {
+    zoom: 2.5;
+  }
+  .paint--container
+  {
+    zoom: 1.4;
+  }
+  .clues--container
+  {
+    zoom: 1;
+  }
+  .game--container
+  {
+    min-width: 80%;
+  }
+  .check--result
+  {
+    zoom: 1.5;
+  }
+  .--clue--checker
+  {
+    zoom: 1.4;
+  }
+}
